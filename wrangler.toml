@@ -12,6 +12,10 @@ workers_dev = false
 # 	{ pattern = "subdomain.example.com/*", zone_id = "<YOUR_ZONE_ID>" }
 # ]
 
+# [[routes]]
+# pattern = "geo.srvr.dev"
+# custom_domain = true
+
 [placement]
 mode = "smart"
 
