@@ -4,13 +4,13 @@
 	"private": true,
 	"prettier": "@zaher/prettier-config",
 	"scripts": {
-		"deploy": "wrangler deploy",
+		"deploy": "wrangler deploy --minify",
 		"dev": "wrangler dev",
 		"env": "dotenv -e ./.dev.vars --",
 		"start": "wrangler dev",
 		"style:fix": "prettier . --write",
 		"test": "vitest",
-		"typegen": "wrangler types",
+		"typegen": "wrangler types --env-interface CloudflareBindings",
 		"postinstall": "touch .dev.vars"
 	},
 	"devDependencies": {

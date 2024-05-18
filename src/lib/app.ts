@@ -4,7 +4,11 @@ import { cors } from 'hono/cors';
 import { etag } from 'hono/etag';
 import { ratelimit } from '@/lib/middlewares/ratelimit';
 
-const app = new Hono();
+type Bindings = {
+	[key in keyof CloudflareBindings]: CloudflareBindings[key];
+};
+
+const app = new Hono<{ Bindings: Bindings }>();
 
 // middlewares
 app.use(ratelimit())
