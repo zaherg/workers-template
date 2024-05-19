@@ -130,3 +130,12 @@ simple = { limit = 5, period = 60 }
 # [[vectorize]]
 # binding = "MY_INDEX"
 # index_name = "my-index"
+
+[env.production]
+[vars]
+ENVIRONMENT = "production"
+
+[env.staging]
+[vars]
+ENVIRONMENT = "staging"
+workers_dev = true

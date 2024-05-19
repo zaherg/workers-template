@@ -4,9 +4,10 @@
 	"private": true,
 	"prettier": "@zaher/prettier-config",
 	"scripts": {
-		"deploy": "wrangler deploy --minify",
+		"deploy:prod": "wrangler deploy --minify --env production",
+		"deploy:staging": "wrangler deploy --minify --env staging",
 		"dev": "wrangler dev",
-		"env": "dotenv -e ./.dev.vars --",
+		"env": "dotenv -e ./.dev.vars -e ./.env --",
 		"start": "wrangler dev",
 		"style:fix": "prettier . --write",
 		"test": "vitest",
@@ -16,6 +17,7 @@
 	"devDependencies": {
 		"@cloudflare/vitest-pool-workers": "^0.1.0",
 		"@cloudflare/workers-types": "^4.20240512.0",
+		"@types/node": "20.8.3",
 		"@zaher/prettier-config": "^1.0.4",
 		"dotenv-cli": "^7.4.2",
 		"prettier": "^3.2.5",
@@ -25,5 +27,8 @@
 	},
 	"dependencies": {
 		"hono": "^4.3.7"
+	},
+	"overrides": {
+		"@types/node": "20.8.3"
 	}
 }
