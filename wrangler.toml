@@ -131,11 +131,11 @@ simple = { limit = 5, period = 60 }
 # binding = "MY_INDEX"
 # index_name = "my-index"
 
+# Production environment
 [env.production]
-[vars]
-ENVIRONMENT = "production"
+vars = { ENVIRONMENT = "production" }
 
+# Staging environment
 [env.staging]
-[vars]
-ENVIRONMENT = "staging"
+vars = { ENVIRONMENT = "staging" }
 workers_dev = true
