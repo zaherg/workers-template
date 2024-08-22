@@ -28,7 +28,7 @@
 		"wrangler": "^3.0.0"
 	},
 	"dependencies": {
-		"hono": "^4.3.7"
+		"hono": "^4.5.8"
 	},
 	"overrides": {
 		"@types/node": "20.8.3"
